@@ -1,4 +1,5 @@
 # Adobe-GenSolve
+
 ## CURVETOPIA
 
 ### Introduction
@@ -11,7 +12,7 @@ Our mission is to develop a robust system that can process 2D curves, transformi
 
 ### Problem Statement
 
-While our ultimate goal is to work with PNG (raster) images of line art, we've started with a simplified approach. Our current input consists of polylines, defined as sequences of points in \( \mathbb{R}^2 \). Specifically, we work with a finite subset of paths from \( P \), where \( P \) is the set of all paths in \( \mathbb{R}^2 \). Each path is a finite sequence of points \(\{p_i\}_{1 \leq i \leq n}\) from \( \mathbb{R}^2 \).
+While our ultimate goal is to work with PNG (raster) images of line art, we've started with a simplified approach. Our current input consists of polylines, defined as sequences of points in \( \mathbb{R}^2 \). Specifically, we work with a finite subset of paths from \( P \), where \( P \) is the set of all paths in \( \mathbb{R}^2 \). Each path is a finite sequence of points \(\{p*i\}*{1 \leq i \leq n}\) from \( \mathbb{R}^2 \).
 
 Our task is to transform this input into another set of paths that exhibit the desired properties of regularization, symmetry, and completeness. For visualization purposes, we use the SVG format, which can be rendered in a browser, with the output curves represented as cubic Bézier curves.
 
@@ -22,7 +23,6 @@ Our task is to transform this input into another set of paths that exhibit the d
 - **Symmetry Exploration:** For closed shapes, we detect the presence of symmetry, focusing primarily on reflection symmetries. This involves identifying lines of symmetry where the shape can be divided into mirrored halves.
 
 - **Curve Completion:** We address the challenge of completing curves that have been "planarized" due to overlapping portions being removed. This task requires us to naturally complete curves with gaps or partial holes.
-
 
 ## Table of Contents
 
@@ -39,8 +39,6 @@ Our task is to transform this input into another set of paths that exhibit the d
    - [3D Conversion Occlusion Model](#3d-conversion-occlusion-model)
    - [Acknowledgements](#acknowledgements)
 
-
-
 ## Shapes Detection
 
 ### Detection of Various Shapes
@@ -55,7 +53,7 @@ This task involves identifying and classifying regular shapes within curves. The
 
 ### Custom Model Development
 
-Initially, we used a pre-trained YOLOv8 model, known for its high accuracy in detecting shapes from aerial views. However, for educational purposes and to enhance learning, we developed a custom Convolutional Neural Network (CNN). This model was trained on approximately 90,000 images of different shapes. 
+Initially, we used a pre-trained YOLOv8 model, known for its high accuracy in detecting shapes from aerial views. However, for educational purposes and to enhance learning, we developed a custom Convolutional Neural Network (CNN). This model was trained on approximately 90,000 images of different shapes.
 
 While the YOLOv8 model offered high accuracy, the custom CNN allows us to delve deeper into the specifics of shape detection and provides a learning experience. The accuracy of our custom model can be further improved with a larger and more diverse dataset.
 
@@ -94,6 +92,7 @@ Bezier curves are applied to contour data to help visualize symmetrical properti
 To address curve completion, we utilize the DeepFill algorithm. This method fills gaps in curves caused by occlusions, guided by smoothness, regularity, and symmetry.
 
 **Reference:**
+
 - **Free-Form Image Inpainting with Gated Convolution**
 - **Authors:** Yu, Jiahui; Lin, Zhe; Yang, Jimei; Shen, Xiaohui; Lu, Xin; Huang, Thomas S
 - **Year:** 2018
@@ -113,6 +112,5 @@ We acknowledge the foundational contributions of the authors of the DeepFill alg
 
 For questions or contributions, please reach out to us at [rohith2210194@ssn.edu.in].
 
-
 Have a look through our demo here,
-<video controls src="AdobeDEMO - Made with Clipchamp.mp4" title="Title"></video>
+(https://www.canva.com/design/DAGNkXMIOZQ/x6iFIXz2xsmVtxaIDdkDTQ/edit?utm_content=DAGNkXMIOZQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
